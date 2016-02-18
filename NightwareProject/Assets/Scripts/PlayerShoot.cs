@@ -12,7 +12,7 @@ public class PlayerShoot : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		partSystem = this.GetComponentInChildren<ParticleSystem>();
-        lineRenderer = this.renderer as LineRenderer;
+        lineRenderer = this.GetComponent<Renderer>() as LineRenderer;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +24,7 @@ public class PlayerShoot : MonoBehaviour {
 //        }
 	}
     void Shoot() {
-        light.enabled = true;
+        GetComponent<Light>().enabled = true;
 		partSystem.Play();
         this.lineRenderer.enabled = true;
         lineRenderer.SetPosition(0, transform.position);
@@ -39,7 +39,7 @@ public class PlayerShoot : MonoBehaviour {
         } else {
             lineRenderer.SetPosition(1, transform.position + transform.forward * 100);
         }
-        audio.Play();
+        GetComponent<AudioSource>().Play();
 
         Invoke("Clear", 0.05f);
     }
@@ -55,7 +55,7 @@ public class PlayerShoot : MonoBehaviour {
 	
 	}
 	void Clear() {
-        light.enabled = false;
+        GetComponent<Light>().enabled = false;
         lineRenderer.enabled = false;
     }
 }

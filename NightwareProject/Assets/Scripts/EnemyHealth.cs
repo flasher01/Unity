@@ -32,7 +32,7 @@ public class EnemyHealth : MonoBehaviour {
 
     public void TakeDamage(float damage,Vector3 hitPoint) {
         if (this.hp <= 0) return;
-        audio.Play();
+        GetComponent<AudioSource>().Play();
         partSystem.transform.position = hitPoint;
         partSystem.Play();
         this.hp -= damage;

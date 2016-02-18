@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour {
     void Awake() {
         anim = this.GetComponent<Animator>();
         this.playerMove = this.GetComponent<PlayerMove>();
-        this.bodyRenderer = transform.Find("Player").renderer as SkinnedMeshRenderer;
+        this.bodyRenderer = transform.Find("Player").GetComponent<Renderer>() as SkinnedMeshRenderer;
         playerShoot = this.GetComponentInChildren<PlayerShoot>();
     }
 
