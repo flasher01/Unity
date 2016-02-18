@@ -22,7 +22,7 @@ public class GameMenu : MonoBehaviour {
 	/**游戏介绍*/
 	public void gameIntruduction(){
 
-        Debug.Log("Hello Tegner welcome to hoolai shit fuck");
+        Debug.Log("Hello Tegner welcome to hoolai shit fuck   ssssssss");
 
 	}
 	/**游戏设置*/
