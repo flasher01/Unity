@@ -22,6 +22,8 @@ public class GameMenu : MonoBehaviour {
 	/**游戏介绍*/
 	public void gameIntruduction(){
 
+        Debug.Log("Hello Tegner welcome to hoolai");
+
 	}
 	/**游戏设置*/
 	public void gameSeting(){
